@@ -154,12 +154,12 @@ push-chart: helm-lint helm-archive helm-properties
 
 .PHONY: helm-install
 helm-install: docker
-	helm upgrade --install --set "image.tag=$(IMAGE_VERSION)" --devel --namespace users-service -f ./helm/users-service/minikube-values.yaml users-service ./helm/users-service/
+	helm upgrade --install --set "image.tag=$(IMAGE_VERSION)" --devel --namespace Flexinder -f ./helm/Flexinder/minikube-values.yaml Flexinder ./helm/Flexinder/
 	# You have to add host name minikube.local to hosts file. This is necessary to communicate with your app in minikube.
 	# You might execute command in terminal:
 	# 'echo "$(minikube ip) minikube.local" > /etc/hosts' or 'echo "$(minikube ip) minikube.local" | sudo tee -a /etc/hosts'
 
 .PHONY: helm-delete
 helm-delete:
-	helm delete --purge users-service
+	helm delete --purge Flexinder
 
