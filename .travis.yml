@@ -1,7 +1,37 @@
+os: linux
+arch: arm64-graviton2
+dist: focal
+
+sudo: required
 language: java
 # use Java 8
 jdk:
   - oraclejdk8
+  -
+services:
+  - docker
 
-# see https://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure
-sudo: false
+branches:
+  only:
+    - master
+    - develop
+
+before_script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - curl https://cli-assets.heroku.com/install.sh | sudo sh
+  - docker login --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com
+  - make fmt && git diff --exit-code
+  - make test
+
+script:
+  - 'if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then make push IMAGE_VERSION=latest; fi'
+  - 'if [[ "$TRAVIS_BRANCH" == "develop" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then make push IMAGE_VERSION=develop; fi'
+  - 'if [[ "$TRAVIS_BRANCH" != "master" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then make push; fi'
+
+deploy:
+  provider: script
+  script:
+    docker push registry.heroku.com/$HEROKU_APP/web;
+    heroku container:release web --app $HEROKU_APP
+  on:
+    branch: master
