@@ -19,5 +19,3 @@ before_script:
   - curl https://cli-assets.heroku.com/install.sh | sudo sh
   - docker login --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com
 
-script:
-  - 'if [[ "$TRAVIS_BRANCH" == "main" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then make push IMAGE_VERSION=latest; fi'
