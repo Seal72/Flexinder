@@ -36,6 +36,17 @@ public class ClientDAO extends DAO {
         return client;
     }
 
+    public Client getClientByLoginPassword(String login, String password) throws DAOException {
+        Client client = null;
+        try {
+            Query query = entityManager.createQuery("select client from Client client where client.login like '" + login + "' and client.password like '" + password + "'");
+            client = (Client) query.getSingleResult();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return client;
+    }
+
     public void addClient(Client client){
         entityManager.merge(client);
     }

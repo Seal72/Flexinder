@@ -8,17 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Hello World Example</title>
+  <title>Hello World Example</title> 
+  <script src="script/login.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <h1>Login</h1>
 
-<form action="hello">
+<form action="login.action">
   <label for="name">LOGIN PAGE</label><br/>
   <p for="name">Login</p>
-  <input type="text" name="name"/><br>
+  <input id="loginFieldId" type="text" name="login"/><br>
   <p for="name">Password</p>
-  <input type="text" name="name"/><br>
+  <input id="passwordFieldId" type="text" name="password"/><br>
   <input type="submit" value="log in"/>
 </form>
 </body>
