@@ -4,7 +4,9 @@ import com.flexapp.entity.jpa.Client;
 import com.flexapp.model.dao.exception.DAOException;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.util.List;
 
 
@@ -48,7 +50,11 @@ public class ClientDAO extends DAO {
     }
 
     public void addClient(Client client){
+        EntityTransaction t = entityManager.getTransaction();
+        t.begin();
         entityManager.merge(client);
+        entityManager.flush();
+        t.commit();
     }
 
 }

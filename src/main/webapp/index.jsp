@@ -17,11 +17,12 @@
 
 <form action="login.action">
   <label for="name">LOGIN PAGE</label><br/>
-  <p for="name">Login</p>
+  <p for="name">Login/Name</p>
   <input id="loginFieldId" type="text" name="login"/><br>
   <p for="name">Password</p>
   <input id="passwordFieldId" type="text" name="password"/><br>
-  <input type="submit" value="log in"/>
+  <input type="submit" value="Log In"/><br>
+  <a href="registration.jsp">Log Up</a>
 </form>
 </body>
 </html>

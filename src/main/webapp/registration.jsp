@@ -13,19 +13,25 @@
 <body>
 <h1>Sign up</h1>
 
-<form action="hello">
+<form action="logup.action">
     <p style="text-align: left;">Become part of our community :)</p>
     <p style="text-align: left;">Name</p>
     <input type="text" name="name"/><br>
     <p style="text-align: center;"></p>
     <p style="text-align: left;">Password</p>
-    <input type="text" name="name"/><br>
+    <input type="text" name="password"/><br>
     <p style="text-align: center;"></p>
-    <p style="text-align: left;">E-mail</p>
-    <input type="text" name="name"/><br>
+    <p style="text-align: left;">First name</p>
+    <input type="text" name="firstName"/><br>
     <p style="text-align: center;"></p>
-    <p style="text-align: left;">Male/Female</p>
-    <input type="text" name="name"/><br>
+    <p style="text-align: left;">Last name</p>
+    <input type="text" name="lastName"/><br>
+    <p style="text-align: center;"></p>
+    <p style="text-align: left;">Gender</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
     <p style="text-align: center;"></p>
     <p style="text-align: center;"></p>
     <input type="submit" value="sign up"/>

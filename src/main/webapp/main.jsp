@@ -19,8 +19,9 @@
     <p style="text-align: left; margin-left:400px ">Личная информация</p>
     <p style="text-align: left; margin-left:400px ">Отношения: свободна<br /><br /></p>
     <br /><br />
-    <button style="color: #9932cc;">Знакомства</button> <br /><br />
-    <button style="color: #808080;">Сообщения</button> <br /><br />
-    <button style="color: #808080;">Настройки</button></form>
+    <a style="color: #9932cc;">Знакомства</a> <br /><br />
+    <a href="chat.jsp" style="color: #808080;">Сообщения</a> <br /><br />
+    <a href="profile.jsp" style="color: #808080;">Профиль</a>
+</form>
 </body>
 </html>

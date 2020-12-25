@@ -30,6 +30,9 @@ public class Client {
     @Column(name = "BIRTHDATE")
     private Date birthdate;
 
+    @Column(name = "GENDER")
+    private String gender;
+
     public Client() {
         super();
     }
@@ -97,5 +100,13 @@ public class Client {
 
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

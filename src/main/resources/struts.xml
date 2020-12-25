@@ -32,6 +32,10 @@
             <result name="notAuthorized">notAuthorized.jsp</result>
         </action>
 
+        <action name="logup" class="com.flexapp.controller.action.authentication.RegistrationAction" method="logup">
+            <result name="success">index.jsp</result>
+        </action>
+
         <action name="like" class="com.flexapp.controller.action.userEvaluation.LikeDislikeAction" method="likeUser">
             <result name="success" type="json">
                 <param name="excludeNullProperties">true</param>
