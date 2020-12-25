@@ -7,7 +7,6 @@ import org.apache.struts2.ServletActionContext;
 public class AuthenticationAction extends ActionSupport {
 
     private String login;
-
     private String password;
 
     public String login() throws Exception {

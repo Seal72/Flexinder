@@ -10,9 +10,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Hello World Example</title>
 </head>
 <body>
-Hello <s:property value="name"/>!
+<h1>You are not authorized</h1>
 </body>
 </html>
