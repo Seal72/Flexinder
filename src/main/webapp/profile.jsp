@@ -26,6 +26,7 @@
         <a href="main.jsp" style="color: #808080;">Знакомства</a> <br /><br />
         <a href="chat.jsp" style="color: #808080;">Сообщения</a> <br /><br />
         <a href="profile.jsp" style="color: #9932cc;">Профиль</a>
+    </div>
     <div id="right"  style="border-left:1px solid grey; padding-left:10px;">
         <p><strong>Артём, 20 лет</strong></p>
         <div><br><br><br><br><br><br><br><br></div>

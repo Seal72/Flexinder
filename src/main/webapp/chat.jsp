@@ -26,6 +26,7 @@
         <a href="main.jsp" style="color: #808080;">Знакомства</a> <br /><br />
         <a href="chat.jsp" style="color: #9932cc;">Сообщения</a> <br /><br />
         <a href="profile.jsp" style="color: #808080;">Профиль</a>
+    </div>
     <div id="right"  style="border-left:1px solid grey; padding-left:10px;"><div></div><input style="margin-top: 400px;" type="text" name="userName" placeholder="Введите сообщение" size="40" /> <button style="color: #9932cc; margin-left: 10px;">Отправить</button></div>
 </form>
 </body>
