@@ -12,8 +12,9 @@
     <style type="text/css">
         * { margin: 0; padding: 0; }
         p { padding: 10px; }
-        #left { position: absolute; left: 0; top: 0; width: 20%; }
-        #right { position: absolute; right: 0; top: 0; width: 70%; }
+        #left { position: absolute; left: 0; top: 0; width: 25%; }
+        #center { position: absolute; left: 25%; top: 0; width: 25%; }
+        #right { position: absolute; right: 0; top: 0; width: 50%; }
     </style>
 </head>
 <body>
