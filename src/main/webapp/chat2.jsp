@@ -23,14 +23,16 @@
 <form action="login.action">
     <p></p>
     <div></div>
-    <div id="left"><br /><br /><br /><br /><br /><br /><br /><br /><button style="color: #9932cc;">Знакомства</button> <br /><br /><button style="color: #808080;">Сообщения</button> <br /><br /><button style="color: #808080;">Настройки</button></div>
+    <div id="left"><br /><br /><br /><br /><br /><br /><br /><br /><a href="main.jsp" style="color: #9932cc;">Знакомства</a> <br /><br /><a style="color: #808080;">Сообщения</a> <br /><br /><a href="profile.jsp" style="color: #808080;">Профиль</a></div>
     <div id="center" style="border-left:1px solid grey; padding-left:10px;">
         <a href="chat.jsp">Kristina</a> <br>
         <a href="chat2.jsp">Maxim</a> &#8226<br>
         <a href="chat3.jsp">Alexander</a></div><br>
     <div id="right"  style="border-left:1px solid grey; padding-left:10px;">
         <p><strong>Maxim</strong></p>
-        <div></div><input style="margin-top: 400px;" type="text" name="userName" placeholder="Введите сообщение" size="30" /> <button style="color: #9932cc; margin-left: 10px;">Отправить</button></div>
+        <p>&#8226 Привет</p>
+        <p style="margin-left: 60px;">Ооооо, сколько лет, сколько зим! &#8226</p>
+        <div></div><input style="margin-top: 400px;" type="text" name="userName" placeholder="Введите сообщение" size="30" /> <input style="color: #9932cc; margin-left: 10px;" type="submit" value="Отправить"/></div>
 </form>
 </body>
 </html>
