@@ -28,7 +28,10 @@
         </action>
 
         <action name="login" class="com.flexapp.controller.action.authentication.AuthenticationAction" method="login">
-            <result name="success">main.jsp</result>
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
             <result name="notAuthorized">notAuthorized.jsp</result>
         </action>
 
