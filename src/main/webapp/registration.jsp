@@ -15,8 +15,8 @@
 
 <form action="logup.action">
     <p style="text-align: left;">Become part of our community :)</p>
-    <p style="text-align: left;">Name</p>
-    <input type="text" name="name"/><br>
+    <p style="text-align: left;">Login</p>
+    <input type="text" name="login"/><br>
     <p style="text-align: center;"></p>
     <p style="text-align: left;">Password</p>
     <input type="text" name="password"/><br>

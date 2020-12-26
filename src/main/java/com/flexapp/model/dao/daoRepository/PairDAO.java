@@ -30,8 +30,8 @@ public class PairDAO extends DAO {
         Pair pair = null;
         try {
             Query query = entityManager.createQuery("select pair from Pair pair where (" +
-                    "(pair.firstUserId = " + firstUserId + " and pair.secondUserId = " + secontUserId + ") or " +
-                            "(pair.secondUserId = " + secontUserId + " and pair.firstUserId = " + firstUserId + "))");
+                    "(pair.firstUserId.clientId = " + firstUserId.getClientId() + " and pair.secondUserId.clientId = " + secontUserId.getClientId() + ") or " +
+                            "(pair.secondUserId.clientId = " + secontUserId.getClientId() + " and pair.firstUserId.clientId = " + firstUserId.getClientId() + "))");
             pair = (Pair) query.getSingleResult();
         } catch (Exception e) {
             System.out.println(e);

@@ -6,6 +6,7 @@ import com.flexapp.entity.jpa.Pair;
 import com.flexapp.model.dao.exception.DAOException;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import java.util.List;
 
@@ -31,8 +32,8 @@ public class MessageDAO extends DAO {
         List messages = null;
         try {
             Query query = entityManager.createQuery("select message from Message message where (" +
-                    "(message.userIdFrom = " + pair.getFirstUserId() + " and message.userIdTo = " + pair.getSecondUserId() + ") or " +
-                            "(message.userIdTo = " + pair.getFirstUserId() + " and message.userIdFrom = " + pair.getSecondUserId() + "))");
+                    "(message.userIdFrom.clientId = " + pair.getFirstUserId().getClientId() + " and message.userIdTo.clientId = " + pair.getSecondUserId().getClientId() + ") or " +
+                            "(message.userIdTo.clientId = " + pair.getFirstUserId().getClientId() + " and message.userIdFrom.clientId = " + pair.getSecondUserId().getClientId() + "))");
             messages = query.getResultList();
         } catch (Exception e) {
             System.out.println(e);
@@ -41,7 +42,11 @@ public class MessageDAO extends DAO {
     }
 
     public void addMessage(Message message){
-        entityManager.merge(message);
+        EntityTransaction t = entityManager.getTransaction();
+        t.begin();
+        entityManager.createNativeQuery("insert into message (user_id_from, user_id_to, content) values (" + message.getUserIdFrom().getClientId() + ", " + message.getUserIdTo().getClientId() + ", '" + message.getContent() + "')").executeUpdate();
+        entityManager.flush();
+        t.commit();
     }
 
 }

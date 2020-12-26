@@ -10,20 +10,22 @@ public class Message {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "message_id")
-    private int clientId;
+    private int messageId;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id_from", referencedColumnName = "client_id")
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "USER_ID_FROM", referencedColumnName = "CLIENT_ID")
+    @Column(name = "USER_ID_FROM")
     private Client userIdFrom;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id_to", referencedColumnName = "client_id")
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "USER_ID_FROM", referencedColumnName = "CLIENT_ID")
+    @Column(name = "USER_ID_TO")
     private Client userIdTo;
 
-    @Column(name = "content")
+    @Column(name = "CONTENT")
     private String content;
 
-    @Column(name = "message_time")
+    @Column(name = "MESSAGE_TIME")
     private Date message_time;
 
     public Message() {
@@ -37,12 +39,12 @@ public class Message {
         this.message_time = message_time;
     }
 
-    public int getClientId() {
-        return clientId;
+    public int getMessageId() {
+        return messageId;
     }
 
-    public void setClientId(int clientId) {
-        this.clientId = clientId;
+    public void setMessageId(int clientId) {
+        this.messageId = clientId;
     }
 
     public Client getUserIdFrom() {

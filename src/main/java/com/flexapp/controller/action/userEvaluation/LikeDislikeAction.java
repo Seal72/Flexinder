@@ -1,11 +1,14 @@
 package com.flexapp.controller.action.userEvaluation;
 
+import com.flexapp.entity.jpa.Client;
 import com.flexapp.entity.session.UserSessionInfo;
 import com.flexapp.model.dao.daoRepository.ClientDAO;
+import com.google.gson.Gson;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 
 import java.util.List;
+import java.util.Random;
 
 public class LikeDislikeAction extends ActionSupport {
 
@@ -13,24 +16,45 @@ public class LikeDislikeAction extends ActionSupport {
 
     private int currentUserId;
 
-    public String likeUser() throws Exception {
-        UserSessionInfo userSessionInfo = (UserSessionInfo) ServletActionContext.getRequest().getSession().getAttribute("CURRENT_USER_INFO");
+    private String jsonResponse;
 
-        //setCurrentUserId(userSessionInfo.getUserId());
+    public String likeUser() throws Exception {
 
         ClientDAO clientDao = new ClientDAO();
 
         List clients = clientDao.getAllClients();
 
-
+        Gson gson = new Gson();
+        Random r = new Random();
+        Client client = (Client) clients.get(Math.abs(r.nextInt() % clients.size()));
+        setJsonResponse(gson.toJson(client));
         return "success";
     }
 
     public String dislikeUser() throws Exception {
-        UserSessionInfo userSessionInfo = (UserSessionInfo) ServletActionContext.getRequest().getSession().getAttribute("CURRENT_USER_INFO");
 
-        setCurrentUserId(userSessionInfo.getUserId());
+        ClientDAO clientDao = new ClientDAO();
 
+        List clients = clientDao.getAllClients();
+
+        Gson gson = new Gson();
+        Random r = new Random();
+        Client client = (Client) clients.get(Math.abs(r.nextInt() % clients.size()));
+        setJsonResponse(gson.toJson(client));
+        return "success";
+    }
+
+    public String getRandomUser() throws Exception {
+
+        ClientDAO clientDao = new ClientDAO();
+
+        List clients = clientDao.getAllClients();
+
+        Gson gson = new Gson();
+        Random r = new Random();
+        Client client = (Client) clients.get(Math.abs(r.nextInt() % clients.size()));
+
+        setJsonResponse(gson.toJson(client));
         return "success";
     }
 
@@ -48,5 +72,13 @@ public class LikeDislikeAction extends ActionSupport {
 
     public void setCurrentUserId(int currentUserId) {
         this.currentUserId = currentUserId;
+    }
+
+    public String getJsonResponse() {
+        return jsonResponse;
+    }
+
+    public void setJsonResponse(String jsonResponse) {
+        this.jsonResponse = jsonResponse;
     }
 }

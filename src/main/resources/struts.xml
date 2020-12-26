@@ -64,6 +64,55 @@
             </result>
         </action>
 
+        <action name="getMessages1" class="com.flexapp.controller.action.pair.GerMessagesAction" method="getMessages1">
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
+        </action>
+
+        <action name="getMessages2" class="com.flexapp.controller.action.pair.GerMessagesAction" method="getMessages2">
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
+        </action>
+
+        <action name="getMessages3" class="com.flexapp.controller.action.pair.GerMessagesAction" method="getMessages3">
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
+        </action>
+
+        <action name="sendMessage1" class="com.flexapp.controller.action.pair.GerMessagesAction" method="sendMessage1">
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
+        </action>
+
+        <action name="sendMessage2" class="com.flexapp.controller.action.pair.GerMessagesAction" method="sendMessage2">
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
+        </action>
+
+        <action name="sendMessage3" class="com.flexapp.controller.action.pair.GerMessagesAction" method="sendMessage3">
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
+        </action>
+
+        <action name="getRandomUser" class="com.flexapp.controller.action.userEvaluation.LikeDislikeAction" method="getRandomUser">
+            <result name="success" type="json">
+                <param name="excludeNullProperties">true</param>
+                <param name="noCache">true</param>
+            </result>
+        </action>
+
     </package>
 
 </struts>

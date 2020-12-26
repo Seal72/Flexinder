@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/main.js"></script>
     <title>Hello World Example</title>
 </head>
 <body>
@@ -15,11 +17,11 @@
 
 <form action="hello">
     <p></p>
-    <p style="text-align: left; margin-left:400px "><strong>Kristina, 18</strong></p>
-    <p style="text-align: left; margin-left:400px ">Личная информация</p>
-    <p style="text-align: left; margin-left:400px ">Отношения: свободна<br /><br /></p>
-    <input style="margin-left:400px;" type="submit" value="Лайк"/>
-    <input style="margin-left:100px;" type="submit" value="Дизлайк"/>
+    <p id="foundUserName" style="text-align: left; margin-left:400px "></p>
+    <p id="personalInfo" style="text-align: left; margin-left:400px "></p>
+    <p id="relationships" style="text-align: left; margin-left:400px "><br /><br /></p>
+    <input onclick="getNewUser()" style="margin-left:400px;" type="button" value="Лайк"/>
+    <input onclick="getNewUser()" style="margin-left:100px;" type="button" value="Дизлайк"/>
     <br /><br />
     <a style="color: #9932cc;">Знакомства</a> <br /><br />
     <a href="chat.jsp" style="color: #808080;">Сообщения</a> <br /><br />

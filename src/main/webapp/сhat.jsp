@@ -9,7 +9,7 @@
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/loadChat1.js"></script>
+    <script src="script/loadChat2.js"></script>
     <title>Hello World Example</title>
     <style type="text/css">
         * { margin: 0; padding: 0; }
@@ -30,17 +30,17 @@
         <a style="color: #9932cc;">Сообщения</a> <br /><br />
         <a href="profile.jsp" style="color: #808080;">Профиль</a></div>
     <div id="center" style="border-left:1px solid grey; padding-left:10px;">
-        <a href="chat.jsp">Kristina</a> &#8226<br>
-        <a href="сhat.jsp">Maxim</a><br>
+        <a href="chat.jsp">Kristina</a> <br>
+        <a href="сhat.jsp">Maxim</a> &#8226<br>
         <a href="chаt.jsp">Alexander</a></div><br>
     <div id="right"  style="border-left:1px solid grey; padding-left:10px;">
-        <p><strong>Kristina</strong></p>
+        <p><strong>Maxim</strong></p>
         <div id="chatContentId"><%--
-            <p>&#8226 Приветик</p>
-            <p style="margin-left: 60px;">Добрый вечер, одна тут отдыхаешь? &#8226</p>--%>
+            <p>&#8226 Привет</p>
+            <p style="margin-left: 60px;">Ооооо, сколько лет, сколько зим! &#8226</p>--%>
         </div>
         <input id="messageContentId" style="margin-top: 400px;" type="text" name="userName" placeholder="Введите сообщение" size="30" />
-        <input onclick="sendMessage()" style="color: #9932cc; margin-left: 10px;" type="button" value="Отправить"/></div>
+        <input onclick="sendMessage()"  style="color: #9932cc; margin-left: 10px;" type="button" value="Отправить"/></div>
 </form>
 </body>
 </html>
