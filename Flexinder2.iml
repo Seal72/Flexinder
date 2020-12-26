@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="web" name="Web">
+    <facet type="jpa" name="JPA">
       <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
-        </webroots>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping />
+        <naming-strategy-map />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
-      <facet type="Struts2" name="Struts 2">
-        <configuration>
-          <fileset id="s2fileset" name="Default File Set" removed="false" />
-          <fileset id="s2fileset2" name="My Fileset" removed="false">
-            <file>file://$MODULE_DIR$/src/main/resources/struts.xml</file>
-            <file>jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-core/2.3.1.2/struts2-core-2.3.1.2.jar!/struts-default.xml</file>
-          </fileset>
-          <propertiesKeys disabled="false" />
-        </configuration>
-      </facet>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -46,5 +34,13 @@
     <orderEntry type="library" name="Maven: org.apache.struts:struts2-json-plugin:2.3.1.2" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.5" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.openjpa:openjpa:3.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.4" level="project" />
+    <orderEntry type="library" name="Maven: net.sourceforge.serp:serp:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.xbean:xbean-asm8-shaded:4.17" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jpa_2.2_spec:1.1" level="project" />
   </component>
 </module>
