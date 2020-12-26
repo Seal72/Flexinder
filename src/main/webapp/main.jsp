@@ -18,6 +18,8 @@
     <p style="text-align: left; margin-left:400px "><strong>Kristina, 18</strong></p>
     <p style="text-align: left; margin-left:400px ">Личная информация</p>
     <p style="text-align: left; margin-left:400px ">Отношения: свободна<br /><br /></p>
+    <input style="margin-left:400px;" type="submit" value="Like"/>
+    <input style="margin-left:100px;" type="submit" value="Dislike"/>
     <br /><br />
     <a style="color: #9932cc;">Знакомства</a> <br /><br />
     <a href="chat.jsp" style="color: #808080;">Сообщения</a> <br /><br />
